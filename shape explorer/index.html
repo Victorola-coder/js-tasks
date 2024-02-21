@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shape Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Shape Explorer</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shapes">Shapes</a></li>
+        <li><a href="#volume">Volume</a></li>
+        <li><a href="#practice">Practice</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Shape Explorer!</h2>
+      <p>Learn about different shapes, calculate their properties, and test your knowledge.</p>
+    </section>
+
+    <section id="shapes">
+      <h2>Shape Properties</h2>
+      <div class="calculator-container">
+        <h3>Choose a shape:</h3>
+        <select id="shape">
+          <option value="circle">Circle</option>
+          <option value="square">Square</option>
+          <option value="rectangle">Rectangle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+        <div id="shape-form"></div> <button id="calculate">Calculate</button>
+        <div id="results"></div> </div>
+    </section>
+
+    <section id="volume">
+      <h2>Volume Calculations</h2>
+      <div class="calculator-container">
+        <h3>Choose a 3D shape:</h3>
+        <select id="volume-shape">
+          <option value="cube">Cube</option>
+          <option value="sphere">Sphere</option>
+          <option value="cylinder">Cylinder</option>
+        </select>
+        <div id="volume-form"></div> <button id="calculate-volume">Calculate</button>
+        <div id="volume-results"></div> </div>
+    </section>
+
+    <section id="practice">
+      <h2>Test Your Skills</h2>
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Shape Explorer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

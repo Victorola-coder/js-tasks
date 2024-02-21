@@ -1,0 +1,127 @@
+/* Global styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #444;
+  }
+  
+  header {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #222;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #222;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #ddd;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    color: #444;
+  }
+  
+  /* Calculator containers */
+  .calculator-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .calculator-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .calculator-container input {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .calculator-container button {
+    background-color: #4CAF50; /* Turquoise */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .calculator-container button:hover {
+    background-color: #449d44; /* Darker turquoise */
+  }
+  
+  /* Results */
+  #results,
+  #volume-results {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  /* Specific styles for different sections */
+
+  
+  #volume {
+    background-color: #f5f5f5; /* Lighter gray */
+  }
+  
+  #practice {
+    background-color: #f7f7f7; /* Even lighter gray */
+    background-image: linear-gradient(to right, #f7f7f7 0%, #fafafa 50%, #f7f7f7 100%);
+  }
+  
+  /* Override individual elements within sections */
+  #shapes .calculator-container button {
+    background-color: #3498db; /* Blue */
+    color: white;
+  }
+  
+  #practice .calculator-container button {
+    background-color: #f1c40f; /* Orange */
+    color: white;
+  }
+  
+  #practice .calculator-container label {
+    color: #333; /* Darker text */
+  }
+  
+  #practice .calculator-container input {
+    border: 1px solid #ccc;
+  }
+  
+  /* Responsive styles (optional) */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+    }
+  }
+  
