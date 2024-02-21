@@ -1,3 +1,4 @@
-Use JavaScript to create a web page that allows clients to order pizza. Clients should be able to
-select size, toppings, type of crust, and method of payment. Validate that the form is correct
-before submitting it. Upon submission, the form should display the user’s selection
+Use JavaScript to create a web page for a shuttle company. The client should be able to reserve a
+ticket using this page, selecting the date and time, pick-up and destination locations, and the
+method of payment from a list of available options. Your code should validate the form before it
+is submitted
