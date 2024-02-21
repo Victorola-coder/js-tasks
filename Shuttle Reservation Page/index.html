@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shuttle Reservation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Reserve Your Shuttle</h1>
+  <form id="reservation-form">
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" required>
+
+    <label for="pickup">Pick-up Location:</label>
+    <select id="pickup" name="pickup" required>
+      <option value="">Select Location</option>
+      <option value="airport">Airport</option>
+      <option value="downtown">Downtown</option>
+      <option value="hotel">Hotel</option>
+    </select>
+
+    <label for="destination">Destination:</label>
+    <select id="destination" name="destination" required>
+      <option value="">Select Location</option>
+      <option value="airport">Airport</option>
+      <option value="downtown">Downtown</option>
+      <option value="hotel">Hotel</option>
+    </select>
+
+    <label for="payment">Payment Method:</label>
+    <select id="payment" name="payment" required>
+      <option value="">Select Payment</option>
+      <option value="cash">Cash on Arrival</option>
+      <option value="credit">Credit Card</option>
+      <option value="debit">Debit Card</option>
+    </select>
+
+    <button type="submit">Reserve Shuttle</button>
+  </form>
+
+  <div id="reservation-summary"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

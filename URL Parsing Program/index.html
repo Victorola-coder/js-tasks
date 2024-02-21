@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>URL Parser/Splitter</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		input[type="text"] {
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 400px;
+			font-size: 16px;
+		}
+		button {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		li {
+			padding: 10px;
+			margin: 10px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="url">Enter a URL:</label>
+		<input type="text" id="url" name="url" placeholder="protocol://part1.part2.….extension">
+		<button type="button" onclick="splitUrl()">Split URL</button>
+	</form>
+	<ul id="urlParts"></ul>
+	<script>
+		function splitUrl() {
+			let url = document.getElementById("url").value;
+			let parts = url.split(/:\/\/|\./);
+			let list = document.getElementById("urlParts");
+			list.innerHTML = "";
+			for (let i = 0; i < parts.length; i++) {
+				let li = document.createElement("li");
+				li.textContent = parts[i];
+				list.appendChild(li);
+			}
+		}
+	</script>
+</body>
+</html>
+
