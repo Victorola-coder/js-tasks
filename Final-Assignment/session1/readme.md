@@ -1,0 +1,1 @@
+Im designing a website for a virtual intergalactic travel agency where users can explore and plan trips to different planets. The website will have sections for planet details, travel packages, and an interactive calculator to determine travel time between planets.
