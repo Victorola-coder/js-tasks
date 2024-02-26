@@ -1,0 +1,48 @@
+<section>
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="errorMessage"></div>
+</section>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var errorMessage = '';
+
+        // Regular expression for valid name (letters, spaces, and dashes)
+        var nameRegex = /^[A-Za-z\s\-]+$/;
+        if (!nameRegex.test(name)) {
+            errorMessage += 'Please enter a valid name.\n';
+        }
+
+        // Regular expression for valid email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            errorMessage += 'Please enter a valid email address.\n';
+        }
+
+        if (message === '') {
+            errorMessage += 'Please enter a message.\n';
+        }
+
+        if (errorMessage !== '') {
+            // Display error message
+            document.getElementById('errorMessage').innerText = errorMessage;
+            return false; // Prevent form submission
+        }
+
+        return true; // Allow form submission
+    }
+</script>
+
+

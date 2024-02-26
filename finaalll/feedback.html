@@ -1,0 +1,38 @@
+<section>
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm">
+        <p>Select your favorite features:</p>
+        <input type="checkbox" id="feature1" name="feature" value="Feature 1">
+        <label for="feature1">Feature 1</label><br>
+        <input type="checkbox" id="feature2" name="feature" value="Feature 2">
+        <label for="feature2">Feature 2</label><br>
+        <input type="checkbox" id="feature3" name="feature" value="Feature 3">
+        <label for="feature3">Feature 3</label><br>
+        <input type="checkbox" id="feature4" name="feature" value="Feature 4">
+        <label for="feature4">Feature 4</label><br>
+        <input type="checkbox" id="feature5" name="feature" value="Feature 5">
+        <label for="feature5">Feature 5</label><br>
+        <button type="button" onclick="submitFeedback()">Submit</button>
+    </form>
+    <div id="feedbackMessage"></div>
+</section>
+
+<script>
+    function submitFeedback() {
+        var selectedFeatures = [];
+        var checkboxes = document.getElementsByName('feature');
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                selectedFeatures.push(checkboxes[i].value);
+            }
+        }
+
+        if (selectedFeatures.length === 0) {
+            document.getElementById('feedbackMessage').innerText = 'Please select at least one feature.';
+        } else {
+            var feedbackString = selectedFeatures.join(', ');
+            document.getElementById('feedbackMessage').innerText = 'Selected features: ' + feedbackString;
+        }
+    }
+</script>

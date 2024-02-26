@@ -1,0 +1,224 @@
+<!-- intergalactic-travel.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="modernizr.custom.05819.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Intergalactic Travel Agency</title>
+  </head>
+  <body>
+    <header>
+      <h1>Intergalactic Travel Agency</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#planets">Planets</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#calculator">Travel Calculator</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <h2>Welcome to the Future of Travel - session 1</h2>
+        <p>
+          Embark on a journey beyond Earth and explore the wonders of our solar
+          system and beyond.
+        </p>
+      </section>
+      <section id="planets">
+        <h2>Discover Unique Planets</h2>
+        <p>
+          Explore information about each planet, its characteristics, and what
+          makes it a unique destination.
+        </p>
+      </section>
+      <section id="packages">
+        <h2>Exclusive Travel Packages</h2>
+        <p>
+          Choose from our curated travel packages, including accommodation,
+          activities, and breathtaking views.
+        </p>
+      </section>
+      <section id="calculator">
+        <h2>Travel Time Calculator</h2>
+        <p>
+          Plan your journey with our interactive calculator. Select your
+          departure and destination planets to get an estimated travel time.
+        </p>
+        <!-- Calculator form goes here -->
+        <form id="travelCalculatorForm">
+          <label for="departurePlanet">Departure Planet:</label>
+          <select id="departurePlanet" name="departurePlanet">
+            <!-- Add options for planets -->
+            <option value="earth">Earth</option>
+            <option value="mars">Mars</option>
+            <!-- Add more planets as needed -->
+          </select>
+          <br />
+          <label for="destinationPlanet">Destination Planet:</label>
+          <select id="destinationPlanet" name="destinationPlanet">
+            <!-- Add options for planets -->
+            <option value="mars">Mars</option>
+            <option value="jupiter">Jupiter</option>
+            <!-- Add more planets as needed -->
+          </select>
+          <br />
+          <button type="button" onclick="calculateTravelTime()">
+            Calculate Travel Time
+          </button>
+          <p id="travelTimeResult"></p>
+        </form>
+      </section>
+
+      <!-- section 2 -->
+      <!-- Calculator Integration -->
+      <section id="calculator-feature">
+        <h2>Calculator Feature - session 2</h2>
+        <p>Perform mathematical calculations based on user input.</p>
+        <input type="number" id="num1" placeholder="Enter number 1" />
+        <input type="number" id="num2" placeholder="Enter number 2" />
+        <button onclick="calculate()">Calculate</button>
+        <p id="calculationResult">Result:</p>
+      </section>
+
+      <!-- SESSION 3 -->
+      <section id="special-offer">
+        <h2>Special Offer - session - 3</h2>
+        <p>Check if you are eligible for our limited-time special offer!</p>
+        <label for="age">Enter your age:</label>
+        <input type="number" id="age" placeholder="Your age" />
+        <button id="checkEligibility">Check Eligibility</button>
+        <p id="eligibilityResult">Result:</p>
+      </section>
+
+      <!-- SECtION 4 -->
+      <section id="contact-form">
+        <h2>Contact Us - session-4</h2>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+        <p id="errorMessage" class="error-message"></p>
+      </section>
+
+      <!-- SESSION 5 -->
+
+      <!-- SESSION 6 -->
+      <section>
+        <h2>Validate Form - session-6</h2>
+
+        <form id="validationForm" onsubmit="validateForm(event)">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" rows="4" required></textarea>
+
+          <label for="agree">I agree to the terms:</label>
+          <input type="checkbox" id="agree" required />
+
+          <button type="submit">Submit</button>
+        </form>
+
+        <div id="validationMessage"></div>
+      </section>
+
+      <!-- SESSION 7 -->
+      <section id="elapsed-time-calculator">
+        <h2>Elapsed Time Calculator - session 7</h2>
+        <p>Calculate the time elapsed since a specific date.</p>
+        <form id="elapsed-time-form">
+          <label for="day">Day:</label>
+          <input type="number" id="day" required />
+
+          <label for="month">Month:</label>
+          <input type="number" id="month" required />
+
+          <label for="year">Year:</label>
+          <input type="number" id="year" required />
+
+          <button type="button" onclick="calculateElapsedTime()">
+            Calculate Elapsed Time
+          </button>
+        </form>
+
+        <div id="result"></div>
+      </section>
+
+      <!-- SESSION 8 -->
+      <section>
+        <h2>Feedback Form - session - 8</h2>
+        <form id="feedbackForm">
+          <label for="options">Select your feedback options:</label>
+          <select id="options" multiple>
+            <option value="positive">Positive Experience</option>
+            <option value="improvement">Areas for Improvement</option>
+            <option value="recommend">Likely to Recommend</option>
+            <option value="neutral">Neutral</option>
+            <option value="other">Other</option>
+          </select>
+          <button type="button" onclick="submitFeedback()">
+            Submit Feedback
+          </button>
+        </form>
+        <p id="feedbackResult">Feedback:</p>
+      </section>
+
+      <!-- SESSION 9 -->
+      <section>
+        <h2>Enhanced Security Validation - session - 9</h2>
+        <form id="securityForm">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            pattern="[a-zA-Z0-9]+"
+            required
+          />
+          <br />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            pattern="^(?=.*\d)(?=.*[a-zA-Z]).{8,}$"
+            required
+          />
+          <br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+
+          <button type="button" onclick="validateForm()">Validate Form</button>
+        </form>
+        <p id="validationResult">Validation Result:</p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Intergalactic Travel Agency</p>
+    </footer>
+  </body>
+</html>

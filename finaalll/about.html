@@ -1,0 +1,36 @@
+<section>
+    <h2>About Us</h2>
+    <p>Select your favorite color:</p>
+    <select id="colorSelect">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+    <div id="colorMessage"></div>
+</section>
+
+<script>
+    // Add event listener to the select element
+    document.getElementById('colorSelect').addEventListener('change', function() {
+        var color = this.value; // Get the selected color
+        var message = '';
+
+        // Use a switch statement to determine the message based on the selected color
+        switch(color) {
+            case 'red':
+                message = 'Red symbolizes passion and energy.';
+                break;
+            case 'blue':
+                message = 'Blue represents calmness and stability.';
+                break;
+            case 'green':
+                message = 'Green signifies growth and harmony.';
+                break;
+            default:
+                message = 'Select a color to see its meaning.';
+        }
+
+        // Display the message
+        document.getElementById('colorMessage').innerText = message;
+    });
+</script>
