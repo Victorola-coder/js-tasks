@@ -225,3 +225,85 @@ function validateForm() {
       "Validation Failed. Please check your input.";
   }
 }
+
+// SESSION 10
+
+function initMap() {
+  const mapOptions = {
+    center: { lat: 0, lng: 0 },
+    zoom: 2,
+  };
+
+  const map = new google.maps.Map(
+    document.getElementById("mapContainer"),
+    mapOptions
+  );
+
+  // Get user's location
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const userLocation = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+
+        // Place a marker at the user's location
+        new google.maps.Marker({
+          position: userLocation,
+          map: map,
+          title: "Your Location",
+        });
+
+        // Center the map on the user's location
+        map.setCenter(userLocation);
+        map.setZoom(10);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  } else {
+    console.error("Geolocation is not supported by this browser.");
+  }
+}
+
+// SESSION !!
+function fetchData() {
+  const url = "https://jsonplaceholder.typicode.com/posts";
+
+  // Make an Ajax request using the Fetch API
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      displayData(data);
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+}
+
+function displayData(data) {
+  const dataContainer = document.getElementById("dataContainer");
+  dataContainer.innerHTML = "";
+
+  if (data.length === 0) {
+    dataContainer.textContent = "No data available.";
+    return;
+  }
+
+  const ul = document.createElement("ul");
+
+  data.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = `Title: ${item.title}, Body: ${item.body}`;
+    ul.appendChild(li);
+  });
+
+  dataContainer.appendChild(ul);
+}
